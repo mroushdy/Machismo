@@ -83,8 +83,6 @@
 		59444371175CC1EA0021D498 /* Machismo */ = {
 			isa = PBXGroup;
 			children = (
-				5944437A175CC1EA0021D498 /* CardGameAppDelegate.h */,
-				5944437B175CC1EA0021D498 /* CardGameAppDelegate.m */,
 				59444383175CC1EA0021D498 /* MainStoryboard.storyboard */,
 				59444386175CC1EA0021D498 /* CardGameViewController.h */,
 				59444387175CC1EA0021D498 /* CardGameViewController.m */,
@@ -96,6 +94,8 @@
 		59444372175CC1EA0021D498 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5944437A175CC1EA0021D498 /* CardGameAppDelegate.h */,
+				5944437B175CC1EA0021D498 /* CardGameAppDelegate.m */,
 				59444373175CC1EA0021D498 /* Machismo-Info.plist */,
 				59444374175CC1EA0021D498 /* InfoPlist.strings */,
 				59444377175CC1EA0021D498 /* main.m */,
