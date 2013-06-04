@@ -12,5 +12,5 @@
 @property (strong, nonatomic) NSString *contents;
 @property (nonatomic, getter = isFaceup) bool faceUp;
 @property (nonatomic, getter = isUnplayable) bool unplayable;
-- (int) match:(Card *)card;
+- (int) match:(NSArray *)card;
 @end
