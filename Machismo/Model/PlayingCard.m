@@ -28,6 +28,19 @@
         } else if(otherCard.rank == self.rank) {
             score = 4;
         }
+    } else if([otherCards count] == 2) {
+        int matchedSuits = 0;
+        int matchedRanks = 0;
+        for (PlayingCard *otherCard in otherCards) {
+            matchedSuits += ([self.suit isEqualToString:otherCard.suit] ? 1 : 0);
+            matchedRanks += ((self.rank == otherCard.rank) ? 1 : 0);
+        }
+        if(matchedSuits == 2) {
+            score = 4;
+        }
+        if(matchedRanks == 2) {
+            score = 8;
+        }
     }
     return score;
 }
