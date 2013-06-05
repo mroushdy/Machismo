@@ -1,4 +1,4 @@
 Machismo
 ========
 
-Stanford iOS development class. Assignment 1.
+Stanford iOS development class.
