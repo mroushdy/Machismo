@@ -33,43 +33,22 @@
         if(!card.isFaceup)
         {
             self.flipMessage = [@[@"Flipped", card.contents] componentsJoinedByString:@" "];
-            NSMutableArray *cardsFacedUp = [[NSMutableArray alloc] init];
             for(Card *otherCard in self.cards)
             {
                 if(otherCard.faceUp && !otherCard.unplayable)
                 {
-                    [cardsFacedUp addObject:otherCard]; //add flipped cards to array to match
-                    if(self.gameMode == 3) { //match three cards
-                        if(cardsFacedUp.count == 2) { //wait till two other cards are flipped
-                            int matchScore = [card match:cardsFacedUp];
-                            if(matchScore) {
-                                card.Unplayable = YES;
-                                for(Card *matchedCard in cardsFacedUp) { //loop over matched cards
-                                    matchedCard.unplayable = YES;
-                                    self.score += matchScore * MATCH_BONUS;
-                                }
-                            } else {
-                                card.faceUp = NO;
-                                for(Card *mismatchedCard in cardsFacedUp) { //no match loop over mis-matched cards
-                                    mismatchedCard.faceUp = NO;
-                                    self.score -= MISMATCH_PENALTY;
-                                }
-                            }
-                        }
-                    } else { //match two cards only
-                        int matchScore = [card match:cardsFacedUp];
-                        if(matchScore) {
-                            card.Unplayable = YES;
-                            otherCard.Unplayable = YES;
-                            self.score += matchScore * MATCH_BONUS;
-                            self.flipMessage = [@[@"Matched", card.contents, @"with", otherCard.contents, @"."] componentsJoinedByString:@" "];
-                        } else {
-                            otherCard.faceUp = NO;
-                            self.score -= MISMATCH_PENALTY;
-                            self.flipMessage = [@[card.contents, @"and", otherCard.contents, @"don't match."] componentsJoinedByString:@" "];
-                        }
-                        break;
+                    int matchScore = [card match:@[otherCard]];
+                    if(matchScore) {
+                        card.Unplayable = YES;
+                        otherCard.Unplayable = YES;
+                        self.score += matchScore * MATCH_BONUS;
+                        self.flipMessage = [@[@"Matched", card.contents, @"with", otherCard.contents, @"."] componentsJoinedByString:@" "];
+                    } else {
+                        otherCard.faceUp = NO;
+                        self.score -= MISMATCH_PENALTY;
+                        self.flipMessage = [@[card.contents, @"and", otherCard.contents, @"don't match."] componentsJoinedByString:@" "];
                     }
+                    break;
                 }
             }
             self.score -= FLIP_COST;

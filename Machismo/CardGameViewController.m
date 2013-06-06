@@ -13,12 +13,10 @@
 @interface CardGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
-@property (nonatomic) bool gameRunning;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *flipMessageLabel;
 @property (strong, nonatomic) CardMatchingGame *game;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *gameMode;
 @end
 
 @implementation CardGameViewController
@@ -33,16 +31,6 @@
 {
     _cardButtons = cardButtons;
     [self updateUI];
-}
-
-- (void)setGameRunning:(bool)gameRunning
-{
-    _gameRunning = gameRunning;
-    if(_gameRunning) {
-        self.gameMode.userInteractionEnabled = NO;
-    } else {
-        self.gameMode.userInteractionEnabled = YES;
-    }
 }
 
 - (void)updateUI
@@ -75,26 +63,14 @@
 - (IBAction)flipCard:(UIButton *)sender
 {
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
-    [self updateUI];
     self.flipCount++;
-    if(!self.gameRunning) self.gameRunning = YES;
+    [self updateUI];
 }
 
 - (IBAction)deal:(id)sender {
     self.game = nil;
-    [self updateUI];
     self.flipCount = 0;
-    self.gameRunning = NO;
-}
-
-
-- (IBAction)changeGameMode:(id)sender {
-    UISegmentedControl *segmentedControl = (UISegmentedControl*) sender;
-    if([segmentedControl selectedSegmentIndex] == 0) {
-        self.game.gameMode = 2; //Two card match
-    } else {
-        self.game.gameMode = 3; //Three card match
-    }
+    [self updateUI];
 }
 
 @end

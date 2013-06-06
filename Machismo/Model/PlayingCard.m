@@ -21,28 +21,13 @@
 - (int)match:(NSArray *)otherCards
 {
     int score = 0;
-    if([otherCards count] == 1) {
-        id otherCard = [otherCards lastObject];
-        if([otherCard isKindOfClass:[PlayingCard class]]) {
-            PlayingCard *otherPlayingCard = (PlayingCard *)otherCard;
-            if([otherPlayingCard.suit isEqualToString:self.suit]){
-                score = 1;
-            } else if(otherPlayingCard.rank == self.rank) {
-                score = 4;
-            }
-        }
-    } else if([otherCards count] == 2) {
-        int matchedSuits = 0;
-        int matchedRanks = 0;
-        for (PlayingCard *otherCard in otherCards) {
-            matchedSuits += ([self.suit isEqualToString:otherCard.suit] ? 1 : 0);
-            matchedRanks += ((self.rank == otherCard.rank) ? 1 : 0);
-        }
-        if(matchedSuits == 2) {
+    id otherCard = [otherCards lastObject];
+    if([otherCard isKindOfClass:[PlayingCard class]]) {
+        PlayingCard *otherPlayingCard = (PlayingCard *)otherCard;
+        if([otherPlayingCard.suit isEqualToString:self.suit]){
+            score = 1;
+        } else if(otherPlayingCard.rank == self.rank) {
             score = 4;
-        }
-        if(matchedRanks == 2) {
-            score = 8;
         }
     }
     return score;
