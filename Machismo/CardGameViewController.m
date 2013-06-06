@@ -81,9 +81,9 @@
 }
 
 - (IBAction)deal:(id)sender {
-    self.game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count] usingDeck:[[PlayingCardDeck alloc] init]];
+    self.game = nil;
     [self updateUI];
-    self.flipsLabel.text = @"Flips: 0";
+    self.flipCount = 0;
     self.gameRunning = NO;
 }
 
