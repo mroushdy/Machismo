@@ -4,16 +4,345 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Item 2-->
+        <!--Set Game View Controller - Item 2-->
         <scene sceneID="4Kp-OF-GD1">
             <objects>
-                <viewController id="ifp-Vq-scV" sceneMemberID="viewController">
+                <viewController id="ifp-Vq-scV" customClass="SetGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Tl-zf-hmf">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sA6-TJ-o7s">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="dax-yd-vQL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="DeE-LL-3w7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKh-bg-Tic">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="V2P-dt-Z3c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="OeQ-K5-Pjn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRo-30-87h">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="oJM-Vk-hVI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="7WI-Ti-ox0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Obm-v8-hxi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="TXk-vD-PPm"/>
+                                    <constraint firstAttribute="width" constant="52" id="r2h-X3-3Zm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="Ton-qS-fGz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJW-QA-J4a">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="dkH-ka-Ej0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdw-NB-Yod">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="n9t-PL-Bos"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XF8-Zz-3GH">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="o0c-q8-tYB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-1Y-DnT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="AHx-gh-Dnu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="8YD-Nc-0a5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRc-S2-7Gx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="dUa-SC-NTD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-1l-3Qh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="BpI-8p-Y1z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNC-uv-XDG">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="mRL-kH-DfA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ScE-55-pVr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="6SN-IW-FRB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="R0W-KR-Gy4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zs-U8-Zp7">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="KIp-g6-0VI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="piU-pC-7Fm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="kJf-Oc-SHL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfq-C8-Y9b">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="7H4-xM-bk7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ytw-QK-LZO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="ogG-zS-7sC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="ZVE-xe-C1A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlH-B6-UNE">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="8hN-TE-uq9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5s4-ZN-9ts">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="s00-Lq-sHT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbW-SU-f4y">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="PKI-ZA-88C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEs-rH-zbT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="kaB-N0-7VL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="aTc-9P-UrC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XgF-YB-2Gw">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="UEY-l7-v9x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKk-Ta-RvI">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="qYl-fp-iPV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yr6-vl-NMX">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="HBU-gQ-0mJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSP-J4-gh2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="gte-LU-V7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="ifp-Vq-scV" eventType="touchUpInside" id="fNr-Sa-YMj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Flips: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUj-rC-CiT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="RrC-5g-Mlf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXg-RS-7Mt">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="bNf-qa-7vm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9C-xI-Kn1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="EhF-Je-uWR"/>
+                                    <constraint firstAttribute="height" constant="29" id="fOJ-JK-nkw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Deal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deal:" destination="ifp-Vq-scV" eventType="touchUpInside" id="6K8-Iq-Vy5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xfq-C8-Y9b" firstAttribute="top" secondItem="piU-pC-7Fm" secondAttribute="top" type="default" id="0wN-3n-6cH"/>
+                            <constraint firstItem="xUj-rC-CiT" firstAttribute="baseline" secondItem="PXg-RS-7Mt" secondAttribute="baseline" type="default" id="1cr-Wx-KvH"/>
+                            <constraint firstItem="Yr6-vl-NMX" firstAttribute="leading" secondItem="rbW-SU-f4y" secondAttribute="leading" type="default" id="1dZ-Vf-0yM"/>
+                            <constraint firstItem="bYy-1Y-DnT" firstAttribute="bottom" secondItem="wJW-QA-J4a" secondAttribute="bottom" type="default" id="28j-h6-PNq"/>
+                            <constraint firstItem="Obm-v8-hxi" firstAttribute="trailing" secondItem="bYy-1Y-DnT" secondAttribute="trailing" type="default" id="2Uw-us-TKt"/>
+                            <constraint firstItem="e9C-xI-Kn1" firstAttribute="centerX" secondItem="7Tl-zf-hmf" secondAttribute="centerX" type="default" id="4Qg-46-gaB"/>
+                            <constraint firstItem="XF8-Zz-3GH" firstAttribute="bottom" secondItem="zdw-NB-Yod" secondAttribute="bottom" type="default" id="4sG-q2-uF3"/>
+                            <constraint firstItem="sA6-TJ-o7s" firstAttribute="leading" secondItem="7Tl-zf-hmf" secondAttribute="leading" constant="102" id="5Nn-vJ-rDk"/>
+                            <constraint firstItem="wJW-QA-J4a" firstAttribute="top" secondItem="bYy-1Y-DnT" secondAttribute="top" type="default" id="5xV-wK-rrV"/>
+                            <constraint firstItem="Obm-v8-hxi" firstAttribute="top" secondItem="sA6-TJ-o7s" secondAttribute="top" type="default" id="6Wl-Ne-iv0"/>
+                            <constraint firstItem="bYy-1Y-DnT" firstAttribute="leading" secondItem="Obm-v8-hxi" secondAttribute="leading" type="default" id="6ZL-Pf-STP"/>
+                            <constraint firstAttribute="bottom" secondItem="xUj-rC-CiT" secondAttribute="bottom" constant="16" id="6in-pF-1xS"/>
+                            <constraint firstItem="WZs-1l-3Qh" firstAttribute="top" secondItem="bRc-S2-7Gx" secondAttribute="top" type="default" id="6oR-rW-6L7"/>
+                            <constraint firstItem="rKh-bg-Tic" firstAttribute="top" secondItem="sA6-TJ-o7s" secondAttribute="top" type="default" id="7Af-mu-HsB"/>
+                            <constraint firstItem="hlH-B6-UNE" firstAttribute="trailing" secondItem="3zs-U8-Zp7" secondAttribute="trailing" type="default" id="7Ca-3F-RYA"/>
+                            <constraint firstItem="XF8-Zz-3GH" firstAttribute="trailing" secondItem="BRo-30-87h" secondAttribute="trailing" type="default" id="7MP-dE-6iV"/>
+                            <constraint firstItem="bRc-S2-7Gx" firstAttribute="bottom" secondItem="ScE-55-pVr" secondAttribute="bottom" type="default" id="7gA-hP-B2u"/>
+                            <constraint firstItem="XF8-Zz-3GH" firstAttribute="leading" secondItem="HNC-uv-XDG" secondAttribute="leading" type="default" id="8YM-Vi-zum"/>
+                            <constraint firstItem="Yr6-vl-NMX" firstAttribute="bottom" secondItem="jKk-Ta-RvI" secondAttribute="bottom" type="default" id="AZz-Xf-xJW"/>
+                            <constraint firstItem="jKk-Ta-RvI" firstAttribute="leading" secondItem="5s4-ZN-9ts" secondAttribute="leading" type="default" id="BI4-q7-AXb"/>
+                            <constraint firstItem="XEs-rH-zbT" firstAttribute="leading" secondItem="ZSP-J4-gh2" secondAttribute="leading" type="default" id="BUI-ee-tVE"/>
+                            <constraint firstItem="XF8-Zz-3GH" firstAttribute="top" secondItem="BRo-30-87h" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CaC-II-bbW"/>
+                            <constraint firstItem="WZs-1l-3Qh" firstAttribute="top" secondItem="HNC-uv-XDG" secondAttribute="top" type="default" id="DBq-7r-HlJ"/>
+                            <constraint firstAttribute="trailing" secondItem="rKh-bg-Tic" secondAttribute="trailing" constant="99" id="Dbm-4z-xmY"/>
+                            <constraint firstItem="zdw-NB-Yod" firstAttribute="top" secondItem="wJW-QA-J4a" secondAttribute="top" type="default" id="DwC-WL-lTa"/>
+                            <constraint firstItem="hlH-B6-UNE" firstAttribute="leading" secondItem="3zs-U8-Zp7" secondAttribute="leading" type="default" id="F38-aw-eYT"/>
+                            <constraint firstAttribute="trailing" secondItem="PXg-RS-7Mt" secondAttribute="trailing" constant="10" id="FZ0-30-rO1"/>
+                            <constraint firstItem="5s4-ZN-9ts" firstAttribute="trailing" secondItem="piU-pC-7Fm" secondAttribute="trailing" type="default" id="GlT-6b-MSz"/>
+                            <constraint firstItem="WZs-1l-3Qh" firstAttribute="bottom" secondItem="HNC-uv-XDG" secondAttribute="bottom" type="default" id="ISO-Gk-8nZ"/>
+                            <constraint firstItem="HNC-uv-XDG" firstAttribute="trailing" secondItem="xfq-C8-Y9b" secondAttribute="trailing" type="default" id="IXP-z7-09a"/>
+                            <constraint firstItem="5s4-ZN-9ts" firstAttribute="leading" secondItem="piU-pC-7Fm" secondAttribute="leading" type="default" id="J9g-79-7fz"/>
+                            <constraint firstItem="piU-pC-7Fm" firstAttribute="top" secondItem="3zs-U8-Zp7" secondAttribute="top" type="default" id="JBW-jh-qqm"/>
+                            <constraint firstItem="XgF-YB-2Gw" firstAttribute="trailing" secondItem="hlH-B6-UNE" secondAttribute="trailing" type="default" id="JuN-yb-OMD"/>
+                            <constraint firstItem="XgF-YB-2Gw" firstAttribute="top" secondItem="ZSP-J4-gh2" secondAttribute="top" type="default" id="KHn-oV-K0G"/>
+                            <constraint firstItem="zdw-NB-Yod" firstAttribute="leading" secondItem="WZs-1l-3Qh" secondAttribute="leading" type="default" id="Kcm-Lh-oHV"/>
+                            <constraint firstItem="ZSP-J4-gh2" firstAttribute="centerX" secondItem="xUj-rC-CiT" secondAttribute="centerX" type="default" id="Lmi-5C-YMX"/>
+                            <constraint firstItem="hlH-B6-UNE" firstAttribute="top" secondItem="3zs-U8-Zp7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MLp-cE-e3Q"/>
+                            <constraint firstItem="rbW-SU-f4y" firstAttribute="bottom" secondItem="5s4-ZN-9ts" secondAttribute="bottom" type="default" id="N6B-C5-uYd"/>
+                            <constraint firstItem="XEs-rH-zbT" firstAttribute="top" secondItem="Ytw-QK-LZO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OrX-uI-xa2"/>
+                            <constraint firstItem="jKk-Ta-RvI" firstAttribute="bottom" secondItem="XgF-YB-2Gw" secondAttribute="bottom" type="default" id="Oub-YX-SbX"/>
+                            <constraint firstItem="zdw-NB-Yod" firstAttribute="leading" secondItem="rKh-bg-Tic" secondAttribute="leading" type="default" id="PGV-u5-mQZ"/>
+                            <constraint firstItem="xfq-C8-Y9b" firstAttribute="leading" secondItem="HNC-uv-XDG" secondAttribute="leading" type="default" id="PZ0-ic-by7"/>
+                            <constraint firstItem="bRc-S2-7Gx" firstAttribute="top" secondItem="ScE-55-pVr" secondAttribute="top" type="default" id="Ptr-aV-rRK"/>
+                            <constraint firstItem="bRc-S2-7Gx" firstAttribute="leading" secondItem="wJW-QA-J4a" secondAttribute="leading" type="default" id="Sv4-dO-tzn"/>
+                            <constraint firstItem="Ytw-QK-LZO" firstAttribute="trailing" secondItem="XEs-rH-zbT" secondAttribute="trailing" type="default" id="Wxo-UT-muC"/>
+                            <constraint firstItem="rbW-SU-f4y" firstAttribute="leading" secondItem="xfq-C8-Y9b" secondAttribute="leading" type="default" id="X7P-wW-kOM"/>
+                            <constraint firstItem="piU-pC-7Fm" firstAttribute="leading" secondItem="WZs-1l-3Qh" secondAttribute="leading" type="default" id="Xrt-sG-M2y"/>
+                            <constraint firstItem="ScE-55-pVr" firstAttribute="leading" secondItem="Ytw-QK-LZO" secondAttribute="leading" type="default" id="Y2x-Of-G69"/>
+                            <constraint firstItem="XEs-rH-zbT" firstAttribute="leading" secondItem="Ytw-QK-LZO" secondAttribute="leading" type="default" id="ZBd-Wy-wWU"/>
+                            <constraint firstItem="rbW-SU-f4y" firstAttribute="trailing" secondItem="Yr6-vl-NMX" secondAttribute="trailing" type="default" id="ZDA-qW-rDL"/>
+                            <constraint firstItem="zdw-NB-Yod" firstAttribute="trailing" secondItem="WZs-1l-3Qh" secondAttribute="trailing" type="default" id="a9X-fW-s1c"/>
+                            <constraint firstItem="Obm-v8-hxi" firstAttribute="top" secondItem="7Tl-zf-hmf" secondAttribute="top" constant="14" id="aWp-rW-UPG"/>
+                            <constraint firstItem="XgF-YB-2Gw" firstAttribute="top" secondItem="jKk-Ta-RvI" secondAttribute="top" type="default" id="atO-Ty-lYh"/>
+                            <constraint firstItem="zdw-NB-Yod" firstAttribute="bottom" secondItem="wJW-QA-J4a" secondAttribute="bottom" type="default" id="bXN-6Y-97n"/>
+                            <constraint firstItem="Ytw-QK-LZO" firstAttribute="top" secondItem="3zs-U8-Zp7" secondAttribute="top" type="default" id="bqc-1e-hWe"/>
+                            <constraint firstItem="5s4-ZN-9ts" firstAttribute="top" secondItem="rbW-SU-f4y" secondAttribute="top" type="default" id="cN1-uM-bMB"/>
+                            <constraint firstItem="sA6-TJ-o7s" firstAttribute="trailing" secondItem="wJW-QA-J4a" secondAttribute="trailing" type="default" id="cWg-jm-TAW"/>
+                            <constraint firstItem="rKh-bg-Tic" firstAttribute="top" secondItem="BRo-30-87h" secondAttribute="top" type="default" id="cox-RK-YHu"/>
+                            <constraint firstAttribute="bottom" secondItem="ZSP-J4-gh2" secondAttribute="bottom" constant="49" id="cso-jG-wrV"/>
+                            <constraint firstItem="bRc-S2-7Gx" firstAttribute="bottom" secondItem="WZs-1l-3Qh" secondAttribute="bottom" type="default" id="erm-da-wLI"/>
+                            <constraint firstItem="hlH-B6-UNE" firstAttribute="top" secondItem="XEs-rH-zbT" secondAttribute="top" type="default" id="gAX-9a-kEw"/>
+                            <constraint firstItem="3zs-U8-Zp7" firstAttribute="trailing" secondItem="bRc-S2-7Gx" secondAttribute="trailing" type="default" id="hOV-Lr-VzX"/>
+                            <constraint firstItem="XF8-Zz-3GH" firstAttribute="leading" secondItem="BRo-30-87h" secondAttribute="leading" type="default" id="hf8-Fa-sBK"/>
+                            <constraint firstItem="bYy-1Y-DnT" firstAttribute="trailing" secondItem="ScE-55-pVr" secondAttribute="trailing" type="default" id="hl7-Pt-WEz"/>
+                            <constraint firstItem="ZSP-J4-gh2" firstAttribute="bottom" secondItem="XgF-YB-2Gw" secondAttribute="bottom" type="default" id="idx-07-70m"/>
+                            <constraint firstAttribute="bottom" secondItem="e9C-xI-Kn1" secondAttribute="bottom" constant="10" id="iyq-If-aqa"/>
+                            <constraint firstItem="wJW-QA-J4a" firstAttribute="trailing" secondItem="bRc-S2-7Gx" secondAttribute="trailing" type="default" id="jkb-cs-KrO"/>
+                            <constraint firstItem="sA6-TJ-o7s" firstAttribute="leading" secondItem="wJW-QA-J4a" secondAttribute="leading" type="default" id="jpE-yY-GoY"/>
+                            <constraint firstItem="zdw-NB-Yod" firstAttribute="trailing" secondItem="rKh-bg-Tic" secondAttribute="trailing" type="default" id="lKW-kl-RhS"/>
+                            <constraint firstItem="rbW-SU-f4y" firstAttribute="trailing" secondItem="xfq-C8-Y9b" secondAttribute="trailing" type="default" id="lYW-Mt-Hxp"/>
+                            <constraint firstItem="zdw-NB-Yod" firstAttribute="top" secondItem="rKh-bg-Tic" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="n38-Ek-N9j"/>
+                            <constraint firstItem="5s4-ZN-9ts" firstAttribute="top" secondItem="piU-pC-7Fm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nXT-FF-tR1"/>
+                            <constraint firstItem="5s4-ZN-9ts" firstAttribute="trailing" secondItem="jKk-Ta-RvI" secondAttribute="trailing" type="default" id="nc5-1t-HNC"/>
+                            <constraint firstItem="XgF-YB-2Gw" firstAttribute="leading" secondItem="hlH-B6-UNE" secondAttribute="leading" type="default" id="pZV-Ty-K7z"/>
+                            <constraint firstItem="jKk-Ta-RvI" firstAttribute="top" secondItem="Yr6-vl-NMX" secondAttribute="top" type="default" id="pjw-Lp-zik"/>
+                            <constraint firstItem="xUj-rC-CiT" firstAttribute="leading" secondItem="7Tl-zf-hmf" secondAttribute="leading" constant="10" id="q0A-pw-Lhu"/>
+                            <constraint firstItem="ZSP-J4-gh2" firstAttribute="trailing" secondItem="XEs-rH-zbT" secondAttribute="trailing" type="default" id="qLy-hU-QuC"/>
+                            <constraint firstItem="rbW-SU-f4y" firstAttribute="top" secondItem="xfq-C8-Y9b" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qoN-zG-7zJ"/>
+                            <constraint firstItem="5s4-ZN-9ts" firstAttribute="bottom" secondItem="hlH-B6-UNE" secondAttribute="bottom" type="default" id="r7z-S6-fxa"/>
+                            <constraint firstItem="zdw-NB-Yod" firstAttribute="top" secondItem="XF8-Zz-3GH" secondAttribute="top" type="default" id="tLB-xe-abE"/>
+                            <constraint firstItem="wJW-QA-J4a" firstAttribute="top" secondItem="sA6-TJ-o7s" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tbI-gO-qxP"/>
+                            <constraint firstItem="XF8-Zz-3GH" firstAttribute="trailing" secondItem="HNC-uv-XDG" secondAttribute="trailing" type="default" id="tfF-Rp-PZL"/>
+                            <constraint firstItem="ScE-55-pVr" firstAttribute="top" secondItem="7Tl-zf-hmf" secondAttribute="top" constant="134" id="tkA-ZU-0MG"/>
+                            <constraint firstItem="Ytw-QK-LZO" firstAttribute="trailing" secondItem="ScE-55-pVr" secondAttribute="trailing" type="default" id="uaS-3l-nLc"/>
+                            <constraint firstItem="bYy-1Y-DnT" firstAttribute="top" secondItem="Obm-v8-hxi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vEX-rl-vhY"/>
+                            <constraint firstItem="bRc-S2-7Gx" firstAttribute="leading" secondItem="3zs-U8-Zp7" secondAttribute="leading" type="default" id="vn5-5Y-0j2"/>
+                            <constraint firstItem="bYy-1Y-DnT" firstAttribute="leading" secondItem="ScE-55-pVr" secondAttribute="leading" type="default" id="wiZ-oR-zPV"/>
+                            <constraint firstItem="XEs-rH-zbT" firstAttribute="bottom" secondItem="hlH-B6-UNE" secondAttribute="bottom" type="default" id="xdk-yH-zyh"/>
+                            <constraint firstItem="Ytw-QK-LZO" firstAttribute="top" secondItem="7Tl-zf-hmf" secondAttribute="top" constant="194" id="z2d-qz-LxH"/>
+                            <constraint firstItem="5s4-ZN-9ts" firstAttribute="top" secondItem="hlH-B6-UNE" secondAttribute="top" type="default" id="zMy-rc-UAW"/>
+                            <constraint firstItem="Yr6-vl-NMX" firstAttribute="centerX" secondItem="PXg-RS-7Mt" secondAttribute="centerX" type="default" id="ziH-Jb-fmO"/>
+                            <constraint firstItem="WZs-1l-3Qh" firstAttribute="trailing" secondItem="piU-pC-7Fm" secondAttribute="trailing" type="default" id="zop-8T-vAk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="oWL-7D-se5"/>
+                    <connections>
+                        <outlet property="flipsLabel" destination="xUj-rC-CiT" id="zrU-JH-gWc"/>
+                        <outlet property="scoreLabel" destination="PXg-RS-7Mt" id="sML-Ba-r20"/>
+                        <outletCollection property="cardButtons" destination="XF8-Zz-3GH" id="bub-vI-Dc9"/>
+                        <outletCollection property="cardButtons" destination="Obm-v8-hxi" id="X9P-hh-VN2"/>
+                        <outletCollection property="cardButtons" destination="sA6-TJ-o7s" id="5er-TH-H56"/>
+                        <outletCollection property="cardButtons" destination="rKh-bg-Tic" id="7iG-kQ-gYp"/>
+                        <outletCollection property="cardButtons" destination="BRo-30-87h" id="Nzf-TN-sVK"/>
+                        <outletCollection property="cardButtons" destination="bYy-1Y-DnT" id="WNX-2b-EDY"/>
+                        <outletCollection property="cardButtons" destination="wJW-QA-J4a" id="aEo-Po-e1W"/>
+                        <outletCollection property="cardButtons" destination="zdw-NB-Yod" id="n5I-86-xaI"/>
+                        <outletCollection property="cardButtons" destination="ScE-55-pVr" id="GYR-m5-rH9"/>
+                        <outletCollection property="cardButtons" destination="bRc-S2-7Gx" id="uq0-PZ-iae"/>
+                        <outletCollection property="cardButtons" destination="WZs-1l-3Qh" id="CHg-61-nj9"/>
+                        <outletCollection property="cardButtons" destination="HNC-uv-XDG" id="a0N-HN-N8c"/>
+                        <outletCollection property="cardButtons" destination="Ytw-QK-LZO" id="uym-7G-Efo"/>
+                        <outletCollection property="cardButtons" destination="3zs-U8-Zp7" id="wmX-XM-LVO"/>
+                        <outletCollection property="cardButtons" destination="piU-pC-7Fm" id="Ahu-BO-sNo"/>
+                        <outletCollection property="cardButtons" destination="xfq-C8-Y9b" id="TzZ-iU-OP0"/>
+                        <outletCollection property="cardButtons" destination="XEs-rH-zbT" id="Tmb-Sk-XxN"/>
+                        <outletCollection property="cardButtons" destination="hlH-B6-UNE" id="feQ-2p-xuM"/>
+                        <outletCollection property="cardButtons" destination="5s4-ZN-9ts" id="tZh-vr-Icd"/>
+                        <outletCollection property="cardButtons" destination="rbW-SU-f4y" id="E3w-2X-pd9"/>
+                        <outletCollection property="cardButtons" destination="ZSP-J4-gh2" id="aD6-M5-fGM"/>
+                        <outletCollection property="cardButtons" destination="XgF-YB-2Gw" id="s9B-b4-15g"/>
+                        <outletCollection property="cardButtons" destination="jKk-Ta-RvI" id="Mtv-t4-XMc"/>
+                        <outletCollection property="cardButtons" destination="Yr6-vl-NMX" id="rQY-gg-d3M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkD-Wd-Ymj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -23,15 +352,15 @@
         <scene sceneID="Vzc-pk-lBV">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="tQd-Ah-SkE" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="wzA-xx-QgU">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ifp-Vq-scV" kind="relationship" relationship="viewControllers" id="VjA-lr-lpB"/>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="NDC-fs-oeC"/>
+                        <segue destination="ifp-Vq-scV" kind="relationship" relationship="viewControllers" id="VjA-lr-lpB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG1-8V-mct" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -415,22 +744,6 @@
             <point key="canvasLocation" x="633" y="-504"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CardGameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardGameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="deal:"/>
-                <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="flipMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="cardButtons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

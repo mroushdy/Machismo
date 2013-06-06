@@ -1,14 +1,14 @@
 //
-//  CardGameViewController.h
+//  SetGameViewController.h
 //  Machismo
 //
-//  Created by Marwan on 6/3/13.
+//  Created by Marwan on 6/6/13.
 //  Copyright (c) 2013 Marwan. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "GameViewController.h"
 
-@interface CardGameViewController : GameViewController
+@interface SetGameViewController : GameViewController
 
 @end

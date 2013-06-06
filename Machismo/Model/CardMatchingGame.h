@@ -21,6 +21,8 @@
 
 @property (readonly, nonatomic) int score;
 
+@property (nonatomic) int gameMode;
+
 @property (readonly, strong, nonatomic) NSString *flipMessage;
 
 @end
