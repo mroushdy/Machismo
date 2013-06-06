@@ -82,9 +82,9 @@
 
 - (IBAction)deal:(id)sender {
     self.game = nil;
-    [self updateUI];
     self.flipCount = 0;
     self.gameRunning = NO;
+    [self updateUI];
 }
 
 
