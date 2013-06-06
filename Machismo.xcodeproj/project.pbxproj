@@ -134,8 +134,8 @@
 				59444393175D14BA0021D498 /* Deck.m */,
 				59444395175D15040021D498 /* PlayingCardDeck.h */,
 				59444396175D15040021D498 /* PlayingCardDeck.m */,
-				59444398175D15140021D498 /* PlayingCard.h */,
 				5944439E175F7B850021D498 /* cardback.png */,
+				59444398175D15140021D498 /* PlayingCard.h */,
 				59444399175D15140021D498 /* PlayingCard.m */,
 				5944439B175DED5F0021D498 /* CardMatchingGame.h */,
 				5944439C175DED5F0021D498 /* CardMatchingGame.m */,
@@ -341,6 +341,7 @@
 				5944438D175CC1EA0021D498 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
