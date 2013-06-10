@@ -12,6 +12,7 @@
 @property (readwrite, nonatomic) int score;
 @property (strong, nonatomic) NSMutableArray *cards; //of Card
 @property (readwrite, strong, nonatomic) NSString *flipMessage;
+@property (strong, nonatomic) Deck *deck;
 @end
 
 @implementation CardMatchingGame
@@ -78,6 +79,24 @@
     }
 }
 
+- (void)drawNewCard
+{
+    Card *card = [self.deck drawRandomCard];
+    if (card) {
+        [self.cards addObject:card];
+    }
+}
+
+- (int)numberOfCards
+{
+    return [self.cards count];
+}
+
+- (void)removeCardAtIndex:(NSUInteger)index
+{
+    [self.cards removeObjectAtIndex:index];
+}
+
 - (Card *)cardAtindex:(NSUInteger)index
 {
     return (index < self.cards.count) ? self.cards[index] : nil;
@@ -87,6 +106,7 @@
 {
     self = [super init];
     if(self) {
+        _deck = deck;
         for (int i=0; i<count; i++) {
             Card *card = [deck drawRandomCard];
             if(card)

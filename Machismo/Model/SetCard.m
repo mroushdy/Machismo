@@ -10,24 +10,37 @@
 
 @implementation SetCard
 
-
+#define NUMBER_OF_MATCHING_CARDS 3
 - (int)match:(NSArray *)otherCards
 {
     int score = 0;
-    if([otherCards count] == 2) {
-        int matchedColor = 0, matchedSymbol = 0, matchedShading = 0, matchedNumber = 0;
+    if ([otherCards count] == NUMBER_OF_MATCHING_CARDS - 1) {
+        NSMutableArray *colors = [[NSMutableArray alloc] init];
+        NSMutableArray *symbols = [[NSMutableArray alloc] init];
+        NSMutableArray *shadings = [[NSMutableArray alloc] init];
+        NSMutableArray *numbers = [[NSMutableArray alloc] init];
+        [colors addObject:self.color];
+        [symbols addObject:self.symbol];
+        [shadings addObject:self.shading];
+        [numbers addObject:@(self.number)];
         for (id otherCard in otherCards) {
-            if([otherCard isKindOfClass:[SetCard class]])
-            {
+            if ([otherCard isKindOfClass:[SetCard class]]) {
                 SetCard *otherSetCard = (SetCard *)otherCard;
-                matchedColor += ([self.color isEqualToString:otherSetCard.color] ? 1 : 0);
-                matchedSymbol += ([self.symbol isEqualToString:otherSetCard.symbol] ? 1 : 0);
-                matchedShading += ([self.shading isEqualToString:otherSetCard.shading] ? 1 : 0);
-                matchedNumber += ((self.number == otherSetCard.number) ? 1 : 0);
+                if (![colors containsObject:otherSetCard.color])
+                    [colors addObject:otherSetCard.color];
+                if (![symbols containsObject:otherSetCard.symbol])
+                    [symbols addObject:otherSetCard.symbol];
+                if (![shadings containsObject:otherSetCard.shading])
+                    [shadings addObject:otherSetCard.shading];
+                if (![numbers containsObject:@(otherSetCard.number)])
+                    [numbers addObject:@(otherSetCard.number)];
+                if (([colors count] == 1 || [colors count] == NUMBER_OF_MATCHING_CARDS)
+                    && ([symbols count] == 1 || [symbols count] == NUMBER_OF_MATCHING_CARDS)
+                    && ([shadings count] == 1 || [shadings count] == NUMBER_OF_MATCHING_CARDS)
+                    && ([numbers count] == 1 || [numbers count] == NUMBER_OF_MATCHING_CARDS)) {
+                    score = 4;
+                }
             }
-        }
-        if(matchedSymbol == 2 || matchedColor == 2 || matchedShading == 2 || matchedNumber == 2) {
-            score = 4;
         }
     }
     return score;
@@ -71,41 +84,9 @@
     if (number <= [SetCard maxNumber]) _number = number;
 }
 
-- (NSAttributedString *)contents
+- (NSString *)contents
 {
-    NSString *cardPlainContents = [[NSString alloc] init];
-    cardPlainContents =[cardPlainContents stringByPaddingToLength:self.number withString:self.symbol startingAtIndex:0];
-    NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:cardPlainContents];
-    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
-    
-    NSRange range = [cardPlainContents rangeOfString:cardPlainContents];
-    
-    
-    [attributes setObject:[UIFont systemFontOfSize:12.0] forKey:NSFontAttributeName];
-    
-    if([self.color isEqualToString:@"red"]) {
-        [attributes setObject:[UIColor redColor] forKey:NSForegroundColorAttributeName];
-    } else if ([self.color isEqualToString:@"green"]) {
-        [attributes setObject:[UIColor greenColor] forKey:NSForegroundColorAttributeName];
-    } else if ([self.color isEqualToString:@"purple"]) {
-        [attributes setObject:[UIColor purpleColor] forKey:NSForegroundColorAttributeName];
-    }
-    
-    if([self.shading isEqualToString:@"solid"]) {
-        [attributes setObject:@-5 forKey:NSStrokeWidthAttributeName];
-    } else if ([self.shading isEqualToString:@"open"]) {
-        [attributes setObject:@5 forKey:NSStrokeWidthAttributeName];
-    } else if ([self.shading isEqualToString:@"stripped"]) {
-        [attributes addEntriesFromDictionary:@{
-                 NSStrokeWidthAttributeName : @-5,
-                 NSStrokeColorAttributeName : attributes[NSForegroundColorAttributeName],
-             NSForegroundColorAttributeName : [attributes[NSForegroundColorAttributeName] colorWithAlphaComponent:0.1]
-         }];
-    }
-    
-    [title addAttributes:attributes range:range];
-    
-    return title;
+    return self.symbol;
 }
 
 + (NSArray *)validColors
@@ -115,12 +96,12 @@
 
 + (NSArray *)validSymbols
 {
-    return @[@"▲", @"●", @"■"];
+    return @[@"oval", @"diamond", @"squiggle"];
 }
 
 + (NSArray *)validShadings
 {
-    return @[@"solid", @"open", @"striped"];
+    return @[@"solid", @"outlined", @"stripped"];
 }
 
 + (NSUInteger)maxNumber
